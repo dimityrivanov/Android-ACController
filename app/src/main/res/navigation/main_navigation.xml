@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/na" app:startDestination="@id/ACFindDeviceFragment">
+
+    <fragment android:id="@+id/ACControlFragment" android:name="com.mvp.accontrol.views.ACControlFragment"
+              android:label="ACControlFragment" tools:layout="@layout/air_control_main"/>
+    <fragment android:id="@+id/ACUnitList" tools:layout="@layout/unit_list_layout"
+              android:name="com.mvp.accontrol.views.ACUnitListFragment" android:label="ACUnitList">
+        <action android:id="@+id/action_ACUnitList_to_ACControlFragment" app:destination="@id/ACControlFragment"
+                app:popUpTo="@+id/ACUnitList" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:id="@+id/ACFindDeviceFragment" android:name="com.mvp.accontrol.views.ACFindDeviceFragment"
+              android:label="ACFindDeviceFragment" tools:layout="@layout/ac_find_device">
+        <action android:id="@+id/action_ACFindDeviceFragment_to_ACUnitList" app:destination="@id/ACUnitList"
+                app:popUpTo="@+id/ACFindDeviceFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_ACFindDeviceFragment_to_ACControlFragment"
+                app:destination="@id/ACControlFragment"/>
+    </fragment>
+</navigation>

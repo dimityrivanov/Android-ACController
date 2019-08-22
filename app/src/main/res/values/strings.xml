@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ACControl</string>
+    <string name="press_and_hold_to_turn_off">Click here to send AC State</string>
+    <string name="speed">Speed</string>
+    <string name="normal">Normal</string>
+    <string name="mode">Mode</string>
+    <string name="swing">Swing</string>
+    <string name="cool">Cool</string>
+    <string name="auto">Auto</string>
+    <string name="dry">Dry</string>
+    <string name="heat">Heat</string>
+    <string name="air_conditioner">Air Conditioner</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+    <string name="searching_for_devices">Searching For Devices...</string>
+    <string name="select_device_brand">Select Device Brand</string>
+    <string name="ac_on">On</string>
+    <string name="ac_off">Off</string>
+    <string name="device_found">Device Found!</string>
+    <string name="continue_con">Continue</string>
+    <string name="try_again">Try Again</string>
+    <string name="device_not_found">Device Not Found...</string>
+</resources>

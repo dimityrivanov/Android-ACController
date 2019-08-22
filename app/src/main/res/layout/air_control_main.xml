@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:background="#ffffff"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+
+    <me.rorschach.library.ShaderSeekArc
+            android:id="@+id/mCircularSeekBar"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            app:startValue="17"
+            app:endValue="30"
+            app:progress="24"
+            app:startColor="0xFF0A92DD"
+            app:endColor="0xFF0A92DD"
+            app:showMark="true"
+            app:showProgress="false"
+            app:markSize="30"
+            app:markColor="0xFF0A92DD"
+            app:progressTextSize="35"
+            app:progressTextColor="0xffFFBB33"
+            app:lineColor="0xFFE9E9E9"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"/>
+
+    <TextView
+            android:text="@string/press_and_hold_to_turn_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#AEAEAE"
+            android:textSize="16sp"
+            android:id="@+id/txtOff" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/mCircularSeekBar"
+            app:layout_constraintStart_toStartOf="@+id/mCircularSeekBar"
+            app:layout_constraintEnd_toEndOf="@+id/mCircularSeekBar"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtOff" android:id="@+id/linearLayout">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:divider="@drawable/divider"
+                android:showDividers="middle"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp">
+
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                               android:layout_weight="1"
+                                               app:cardElevation="4dp"
+                                               android:id="@+id/cardSpeed"
+                                               app:cardCornerRadius="3dp"
+                                               app:cardUseCompatPadding="true"
+                                               android:layout_height="85dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:background="#ffffff"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp" app:srcCompat="@mipmap/ac"
+                            android:id="@+id/imageView" android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="24dp"/>
+                    <TextView
+                            android:text="@string/speed"
+                            android:textColor="#A7A7A7"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2"
+                            app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Normal"
+                            android:textColor="#303030"
+                            android:textSize="18sp"
+                            android:id="@+id/txtSpeed" app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2" android:layout_marginTop="2dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                               android:layout_weight="1"
+                                               app:cardElevation="4dp"
+                                               android:id="@+id/cardMode"
+                                               app:cardCornerRadius="3dp"
+                                               app:cardUseCompatPadding="true"
+                                               android:layout_height="85dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:background="#ffffff"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Cool"
+                            android:textColor="#303030"
+                            android:textSize="18sp"
+                            android:id="@+id/txtMode"
+                            app:layout_constraintStart_toStartOf="@+id/textView5"
+                            app:layout_constraintTop_toBottomOf="@+id/textView5" android:layout_marginTop="2dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"/>
+                    <TextView
+                            android:text="@string/mode"
+                            android:textColor="#A7A7A7"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView5"
+                            app:layout_constraintStart_toEndOf="@+id/imageView2" android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"/>
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp" app:srcCompat="@mipmap/snowflake"
+                            android:id="@+id/imageView2" android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="24dp" android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+            android:text="TextView"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <com.google.android.material.tabs.TabLayout
+            android:layout_width="0dp"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:tabIndicatorColor="#FF1285E1"
+            app:tabTextColor="#FF262626"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp" android:layout_marginEnd="8dp">
+
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Living Room"/>
+
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bedroom 1"/>
+
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bedroom 2"/>
+
+    </com.google.android.material.tabs.TabLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" app:srcCompat="@mipmap/stand_by"
+            app:backgroundTint="#FFFFFFFF"
+            app:borderWidth="1dp"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            android:scaleType="center"
+            app:maxImageSize="40dp"
+            android:id="@+id/floatingActionButton"
+            android:layout_marginTop="60dp" app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="@+id/textView3" app:layout_constraintStart_toStartOf="@+id/textView3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
